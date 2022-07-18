@@ -22,9 +22,9 @@ class Cursor
 
   def draw_cursor(mouse_x, mouse_y)
     if @click_draw
-      @hand_close_image.draw(mouse_x - 26, mouse_y - 25, 1)
+      @hand_close_image.draw(mouse_x - 26, mouse_y - 25, 3)
     else
-      @hand_image.draw(mouse_x - 26, mouse_y - 25, 1)
+      @hand_image.draw(mouse_x - 26, mouse_y - 25, 3)
     end
   end
 end

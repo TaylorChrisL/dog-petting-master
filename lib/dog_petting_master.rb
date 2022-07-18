@@ -14,6 +14,10 @@ class DogPettingMaster < Gosu::Window
     @background_image = Gosu::Image.new("./media/battleback1.png", :tileable => true)
   end
 
+  def needs_cursor?
+    false
+  end
+
   def update
     @dog.update_dog
     @hand.update_cursor

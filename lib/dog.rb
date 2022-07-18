@@ -47,9 +47,9 @@ class Dog
   def draw_dog
 
     if @velocity_x > 0
-      @dog_anim_flipped.first.draw(@x - @width / 2, @y - @height / 2, 1)
+      @dog_anim_flipped.first.draw(@x - @width / 2, @y - @height / 2, 2)
     else
-      @dog_anim.first.draw(@x - @width / 2, @y - @height / 2, 1)
+      @dog_anim.first.draw(@x - @width / 2, @y - @height / 2, 2)
     end
   end
 

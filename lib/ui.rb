@@ -1,3 +1,5 @@
+require_relative 'menu_shop.rb'
+
 class UI
   attr_accessor :score, :hit, :c
 
@@ -6,6 +8,7 @@ class UI
     @score = 0
     @hit = 0
     @c = Gosu::Color::NONE
+    @shop = MenuShop.new
   end
 
   def draw_ui
@@ -20,5 +23,6 @@ class UI
     @hit = 0
 
     @font.draw(@score.to_s, 700, 20, 2)
+    @shop.draw_shop
   end
 end
