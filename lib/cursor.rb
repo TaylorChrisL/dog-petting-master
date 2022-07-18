@@ -1,9 +1,10 @@
 class Cursor
-  attr_accessor :click_draw, :reset_click
+  attr_accessor :click_draw, :reset_click, :cursor_scale
 
   def initialize
     @click_draw = false
     @reset_click = 0
+    @cursor_scale = 1
 
     @hand_image = Gosu::Image.new("./media/handopen.png")
     @hand_close_image = Gosu::Image.new("./media/handclose.png")
@@ -22,7 +23,7 @@ class Cursor
 
   def draw_cursor(mouse_x, mouse_y)
     if @click_draw
-      @hand_close_image.draw(mouse_x - 26, mouse_y - 25, 3)
+      @hand_close_image.draw(mouse_x - 26, mouse_y - 25, 3, scale_x = @cursor_scale, scale_y = @cursor_scale)
     else
       @hand_image.draw(mouse_x - 26, mouse_y - 25, 3)
     end
